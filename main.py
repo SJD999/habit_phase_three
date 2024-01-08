@@ -128,4 +128,4 @@ if __name__ == "__main__":
     """if you want to add habit and track them uncomment below """
     #add_and_track_habits()
     """if you want to show statics also uncomment below uncomment below """
-    #show_statistics()
+    show_statistics()

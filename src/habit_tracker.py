@@ -1,3 +1,9 @@
+"""
+@brief Utility functions for saving and loading Habit objects to/from JSON.
+
+@file habit_utils.py
+"""
+
 from datetime import datetime, timedelta
 import json
 
@@ -8,14 +14,12 @@ from src.MonthlyHabit import MonthlyHabit
 
 def save_habits_to_json(habits, filename):
     """
-    Save a list of habit objects to a JSON file.
+    @brief Save a list of habit objects to a JSON file.
 
-    Parameters:
-    - habits (list): List of Habit objects to be saved.
-    - filename (str): The name of the JSON file.
+    @param habits (list): List of Habit objects to be saved.
+    @param filename (str): The name of the JSON file.
 
-    Returns:
-    None
+    @return None
     """
     habit_data = []
     for habit in habits:
@@ -33,13 +37,11 @@ def save_habits_to_json(habits, filename):
 
 def load_habits_from_json(filename):
     """
-    Load a list of habit objects from a JSON file.
+    @brief Load a list of habit objects from a JSON file.
 
-    Parameters:
-    - filename (str): The name of the JSON file.
+    @param filename (str): The name of the JSON file.
 
-    Returns:
-    list: List of loaded Habit objects.
+    @return list: List of loaded Habit objects.
     """
     habits = []
     with open(filename, 'r') as file:

@@ -1,13 +1,19 @@
+"""
+@brief Represents a generic habit that users can track and mark as completed.
+
+@file Habit.py
+"""
+
 from datetime import datetime, timedelta
 
 class Habit:
     """
-    Represents a generic habit that users can track and mark as completed.
+    @brief Represents a generic habit that users can track and mark as completed.
 
-    Parameters:
-    - name (str): The name of the habit.
-    - start_date (datetime): The start date of the habit.
+    @param name (str): The name of the habit.
+    @param start_date (datetime): The start date of the habit.
 
+    @details
     Attributes:
     - name (str): The name of the habit.
     - start_date (datetime): The start date of the habit.
@@ -27,11 +33,10 @@ class Habit:
 
     def __init__(self, name, start_date):
         """
-        Initializes a Habit object.
+        @brief Initializes a Habit object.
 
-        Parameters:
-        - name (str): The name of the habit.
-        - start_date (datetime): The start date of the habit.
+        @param name (str): The name of the habit.
+        @param start_date (datetime): The start date of the habit.
         """
         self.name = name
         self.start_date = start_date
@@ -40,13 +45,11 @@ class Habit:
 
     def mark_completed(self, completion_date=None):
         """
-        Marks the habit as completed for the specified date.
+        @brief Marks the habit as completed for the specified date.
 
-        Parameters:
-        - completion_date (datetime): The date on which the habit is completed. Defaults to the current date.
+        @param completion_date (datetime): The date on which the habit is completed. Defaults to the current date.
 
-        Raises:
-        - ValueError: If the completion date is outside the habit period.
+        @throws ValueError: If the completion date is outside the habit period.
         """
         if completion_date is None:
             completion_date = datetime.now()
@@ -59,32 +62,28 @@ class Habit:
 
     def mark_incomplete(self, completion_date):
         """
-        Marks the habit as incomplete for the specified date.
+        @brief Marks the habit as incomplete for the specified date.
 
-        Parameters:
-        - completion_date (datetime): The date on which the habit is marked incomplete.
+        @param completion_date (datetime): The date on which the habit is marked incomplete.
         """
         self.completed_dates.discard(completion_date.date())
 
     def calculate_end_date(self, start_date, frequency):
         """
-        Calculates the end date of the habit based on the start date and frequency.
+        @brief Calculates the end date of the habit based on the start date and frequency.
 
-        Parameters:
-        - start_date (datetime): The start date of the habit.
-        - frequency (int): The frequency of the habit.
+        @param start_date (datetime): The start date of the habit.
+        @param frequency (int): The frequency of the habit.
 
-        Raises:
-        - NotImplementedError: Subclasses must implement the calculate_end_date method.
+        @throws NotImplementedError: Subclasses must implement the calculate_end_date method.
         """
         raise NotImplementedError("Subclasses must implement the calculate_end_date method.")
 
     def check_break_status(self):
         """
-        Checks if the habit has been broken based on completion status.
+        @brief Checks if the habit has been broken based on completion status.
 
-        Returns:
-        bool: True if the habit is broken (not completed at all), False otherwise.
+        @return bool: True if the habit is broken (not completed at all), False otherwise.
         """
         if not self.completed_dates:
             self.broken = True

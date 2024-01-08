@@ -1,0 +1,177 @@
+The Habit Tracker is a Python project designed to help users create and monitor their habits, providing a flexible framework for daily, weekly, and monthly tracking.\hypertarget{md_README_autotoc_md1}{}\doxysection{Introduction}\label{md_README_autotoc_md1}
+In our fast-\/paced lives, cultivating positive habits is essential for personal development and well-\/being. The Habit Tracker simplifies the process of habit formation by allowing users to define and track their habits over customizable time intervals.\hypertarget{md_README_autotoc_md2}{}\doxysection{Features}\label{md_README_autotoc_md2}
+
+\begin{DoxyItemize}
+\item {\bfseries{Versatile Tracking\+:}}
+\begin{DoxyItemize}
+\item Create and track daily, weekly, and monthly habits.
+\end{DoxyItemize}
+\item {\bfseries{Flexibility\+:}}
+\begin{DoxyItemize}
+\item Customize habits with varying frequencies, weekdays, and target days.
+\end{DoxyItemize}
+\item {\bfseries{Streaks\+:}}
+\begin{DoxyItemize}
+\item Establish streaks for daily habits to foster consistency.
+\end{DoxyItemize}
+\item {\bfseries{Detailed Monitoring\+:}}
+\begin{DoxyItemize}
+\item View completion dates and streak counts for each habit.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md3}{}\doxysection{Installation}\label{md_README_autotoc_md3}
+Follow these steps to set up the Habit Tracker\+:
+
+
+\begin{DoxyEnumerate}
+\item Clone the repository\+:
+
+\`{}\`{}\`{}bash git clone \href{https://github.com/your-username/habit-tracker.git}{\texttt{ https\+://github.\+com/your-\/username/habit-\/tracker.\+git}} \`{}\`{}\`{}
+\item Navigate to the project directory\+:
+
+\`{}\`{}\`{}bash cd habit-\/tracker \`{}\`{}\`{}
+\item Install dependencies\+:
+
+\`{}\`{}\`{}bash pip install -\/r requirements.\+txt \`{}\`{}\`{}
+\end{DoxyEnumerate}\hypertarget{md_README_autotoc_md4}{}\doxysection{Usage}\label{md_README_autotoc_md4}
+
+\begin{DoxyEnumerate}
+\item Run the main script\+:
+
+\`{}\`{}\`{}bash python3 main.\+py \`{}\`{}\`{}
+\item Follow the prompts to create habits and track completion.
+\end{DoxyEnumerate}\hypertarget{md_README_autotoc_md5}{}\doxysection{Classes}\label{md_README_autotoc_md5}
+\hypertarget{md_README_autotoc_md6}{}\doxysubsection{Habit}\label{md_README_autotoc_md6}
+The base class representing a generic habit.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Attributes\+:}}
+\begin{DoxyItemize}
+\item {\ttfamily name}\+: Name of the habit.
+\item {\ttfamily start\+\_\+date}\+: Start date of the habit.
+\item {\ttfamily completed\+\_\+dates}\+: Set of dates when the habit was completed.
+\end{DoxyItemize}
+\item {\bfseries{Methods\+:}}
+\begin{DoxyItemize}
+\item {\ttfamily mark\+\_\+completed(completion\+\_\+date)}\+: Marks the habit as completed on the specified date.
+\item {\ttfamily mark\+\_\+incomplete(completion\+\_\+date)}\+: Marks the habit as incomplete on the specified date.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md7}{}\doxysubsection{Daily\+Habit}\label{md_README_autotoc_md7}
+A subclass of {\ttfamily Habit} representing a habit to be completed daily.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Additional Attributes\+:}}
+\begin{DoxyItemize}
+\item {\ttfamily end\+\_\+date}\+: End date for daily habits.
+\item {\ttfamily streak\+\_\+count}\+: Count of consecutive days the habit has been completed.
+\end{DoxyItemize}
+\item {\bfseries{Additional Methods\+:}}
+\begin{DoxyItemize}
+\item {\ttfamily check\+\_\+streak(target\+\_\+streak)}\+: Checks if the habit has a streak equal to or greater than the specified target streak.
+\item {\ttfamily get\+\_\+streak\+\_\+count()}\+: Returns the current streak count.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md8}{}\doxysubsection{Weekly\+Habit}\label{md_README_autotoc_md8}
+A subclass of {\ttfamily Habit} representing a habit to be completed weekly.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Additional Attributes\+:}}
+\begin{DoxyItemize}
+\item {\ttfamily weekdays}\+: List of weekdays on which the habit should be completed.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md9}{}\doxysubsection{Monthly\+Habit}\label{md_README_autotoc_md9}
+A subclass of {\ttfamily Habit} representing a habit to be completed monthly.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Additional Attributes\+:}}
+\begin{DoxyItemize}
+\item {\ttfamily target\+\_\+days}\+: List of days in the month on which the habit should be completed.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md10}{}\doxysection{Documentation}\label{md_README_autotoc_md10}
+For more detailed information, check out the docstring provided withh all fucntions\hypertarget{md_README_autotoc_md11}{}\doxysection{Contributing}\label{md_README_autotoc_md11}
+If you want to contribute to this project, follow these steps\+:
+
+
+\begin{DoxyEnumerate}
+\item Fork the project.
+\item Create a new branch.
+\item Make your changes and commit them.
+\item Push your changes to your fork.
+\item Open a pull request.
+\end{DoxyEnumerate}\hypertarget{md_README_autotoc_md12}{}\doxysection{Examples}\label{md_README_autotoc_md12}
+\hypertarget{md_README_autotoc_md13}{}\doxysubsection{Add and Track Habits}\label{md_README_autotoc_md13}
+\`{}\`{}\`{}python \hypertarget{md_README_autotoc_md14}{}\doxysection{Example of adding and tracking habits}\label{md_README_autotoc_md14}
+add\+\_\+and\+\_\+track\+\_\+habits() \`{}\`{}\`{}\hypertarget{md_README_autotoc_md15}{}\doxysubsubsection{Show Statistics}\label{md_README_autotoc_md15}
+\`{}\`{}\`{}python \hypertarget{md_README_autotoc_md16}{}\doxysection{Example of showing statistics}\label{md_README_autotoc_md16}
+show\+\_\+statistics() \`{}\`{}\`{}\hypertarget{md_README_autotoc_md17}{}\doxysubsection{Documentation}\label{md_README_autotoc_md17}
+\hypertarget{md_README_autotoc_md18}{}\doxysubsubsection{Classes}\label{md_README_autotoc_md18}
+\hypertarget{md_README_autotoc_md19}{}\doxyparagraph{1. \`{}\+Habit\`{}}\label{md_README_autotoc_md19}
+Base class for all types of habits.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Methods\+:}}
+\begin{DoxyItemize}
+\item \`{}mark\+\_\+completed(completion\+\_\+date=None)\`{}\+: Mark the habit as completed on a specific date.
+\item \`{}mark\+\_\+incomplete(completion\+\_\+date)\`{}\+: Mark the habit as incomplete on a specific date.
+\item \`{}calculate\+\_\+end\+\_\+date(start\+\_\+date, frequency)\`{}\+: Calculate the end date based on the start date and frequency.
+\item \`{}check\+\_\+break\+\_\+status()\`{}\+: Check if the habit is broken.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md20}{}\doxyparagraph{2. \`{}\+Daily\+Habit\`{}}\label{md_README_autotoc_md20}
+A class for daily habits.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Methods\+:}}
+\begin{DoxyItemize}
+\item \`{}mark\+\_\+completed(completion\+\_\+date=None)\`{}\+: Mark the habit as completed on a specific date.
+\item \`{}check\+\_\+streak(target\+\_\+streak)\`{}\+: Check if the habit has a streak equal to or greater than the target.
+\item \`{}get\+\_\+streak\+\_\+count()\`{}\+: Get the current streak count.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md21}{}\doxyparagraph{3. \`{}\+Weekly\+Habit\`{}}\label{md_README_autotoc_md21}
+A class for weekly habits.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Methods\+:}}
+\begin{DoxyItemize}
+\item \`{}mark\+\_\+completed(completion\+\_\+date=None)\`{}\+: Mark the habit as completed on a specific date.
+\item \`{}calculate\+\_\+end\+\_\+date(start\+\_\+date, frequency)\`{}\+: Calculate the end date based on the start date and frequency.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md22}{}\doxyparagraph{4. \`{}\+Monthly\+Habit\`{}}\label{md_README_autotoc_md22}
+A class for monthly habits.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Methods\+:}}
+\begin{DoxyItemize}
+\item \`{}mark\+\_\+completed(completion\+\_\+date=None)\`{}\+: Mark the habit as completed on a specific date.
+\item \`{}calculate\+\_\+end\+\_\+date(start\+\_\+date, frequency)\`{}\+: Calculate the end date based on the start date and frequency.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md23}{}\doxysubsubsection{Functions}\label{md_README_autotoc_md23}
+\hypertarget{md_README_autotoc_md24}{}\doxyparagraph{1. \`{}save\+\_\+habits\+\_\+to\+\_\+json(habits, filename)\`{}}\label{md_README_autotoc_md24}
+Save a list of habits to a J\+S\+ON file.\hypertarget{md_README_autotoc_md25}{}\doxyparagraph{2. \`{}load\+\_\+habits\+\_\+from\+\_\+json(filename)\`{}}\label{md_README_autotoc_md25}
+Load habits from a J\+S\+ON file.\hypertarget{md_README_autotoc_md26}{}\doxyparagraph{3. \`{}create\+\_\+habit\+\_\+df(habits)\`{}}\label{md_README_autotoc_md26}
+Create a Pandas Data\+Frame from habits.\hypertarget{md_README_autotoc_md27}{}\doxyparagraph{4. \`{}visualize\+\_\+completed\+\_\+dates(habit\+\_\+df)\`{}}\label{md_README_autotoc_md27}
+Visualize completed dates using Matplotlib and Pandas.\hypertarget{md_README_autotoc_md28}{}\doxyparagraph{5. \`{}visualize\+\_\+streak\+\_\+count(daily\+\_\+habits\+\_\+df)\`{}}\label{md_README_autotoc_md28}
+Visualize streak counts for daily habits using Matplotlib and Pandas.\hypertarget{md_README_autotoc_md29}{}\doxyparagraph{6. \`{}visualize\+\_\+broken\+\_\+status(habit\+\_\+df)\`{}}\label{md_README_autotoc_md29}
+Visualize broken status for each habit using Matplotlib and Pandas.\hypertarget{md_README_autotoc_md30}{}\doxysubsection{Unit Test}\label{md_README_autotoc_md30}
+We have included a simple unit test to verify the correct functionality of the {\ttfamily get\+\_\+streak\+\_\+count} method in the {\ttfamily Daily\+Habit} class. This test ensures that the streak count is updated appropriately when loading habits from a J\+S\+ON file.\hypertarget{md_README_autotoc_md31}{}\doxysubsubsection{How to Run the Unit Test}\label{md_README_autotoc_md31}
+To run the unit test, follow these steps\+:
+
+
+\begin{DoxyEnumerate}
+\item Ensure you have Python installed on your machine.
+\item Open a terminal or command prompt.
+\item Navigate to the directory containing your habit tracker script and the unit test script.
+\item Run the following command\+:
+
+\`{}\`{}\`{}bash python -\/m unittest unit-\/test/unittest.\+py \`{}\`{}\`{}
+\item Check the output. If the test passes without any errors, you should see the message \char`\"{}\+Unit test passed successfully!\char`\"{}.
+\end{DoxyEnumerate}\hypertarget{md_README_autotoc_md32}{}\doxysubsubsection{Important Note}\label{md_README_autotoc_md32}
+The unit test uses a temporary J\+S\+ON file for testing purposes. If the test passes, the temporary file is automatically removed. If you encounter any issues, make sure you have the necessary permissions to create and delete files in the specified directory.
+
+\DoxyHorRuler{0}
+ 

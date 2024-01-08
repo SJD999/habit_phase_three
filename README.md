@@ -27,7 +27,7 @@ Follow these steps to set up the Habit Tracker:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/habit-tracker.git
+    git clone https://github.com/SJD999/habit_tracker_backend.git
     ```
 
 2. Navigate to the project directory:
